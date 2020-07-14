@@ -1,5 +1,7 @@
 {
   "name": "insight-bets",
+  "homepage": "https://nickciambrone.github.io/insight-bets",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
