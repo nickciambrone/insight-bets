@@ -2,7 +2,7 @@
   "name": "insight-bets",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://yuribenjamin.github.io/my-app",
+  "homepage": "http://nickciambrone.github.io/insight-bets",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
