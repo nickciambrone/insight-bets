@@ -5,7 +5,7 @@ class Directory extends React.Component{
     constructor(){
         super();
         this.state={
-            sections: [{id:1,title:'ho',imageUrl:'https://www.newgenapps.com/wp-content/uploads/2020/04/1_c_fiB-YgbnMl6nntYGBMHQ-1080x675.jpeg',linkUrl:'hats'},{id:1,title:'ho',imageUrl:'d',linkUrl:''},{id:1,title:'ho',imageUrl:'d'},{id:1,title:'ho',imageUrl:'d',linkUrl:''},{id:1,title:'ho',imageUrl:'d',linkUrl:''}]
+            sections: [{id:1,title:'ho',imageUrl:'https://www.newgenapps.com/wp-content/uploads/2020/04/1_c_fiB-YgbnMl6nntYGBMHQ-1080x675.jpeg',linkUrl:'hats'},{id:2,title:'ho',imageUrl:'d',linkUrl:''},{id:1,title:'ho',imageUrl:'d'},{id:3,title:'ho',imageUrl:'d',linkUrl:''},{id:4,title:'ho',imageUrl:'d',linkUrl:''}]
         }
     }
     render(){
