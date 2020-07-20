@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import './App.css';
 import { connect } from 'react-redux';
 import HomePage from './pages/homepage/homepage.component'
@@ -40,7 +40,7 @@ class App extends React.Component {
       }
       //if the user isnt logged in, just this.state.currentUser to null, (userAuth=null
       //if the user is not signed in when auth.onAuthStateChanged is called)
-      setCurrentUser( userAuth );
+      setCurrentUser(userAuth);
 
     })
   }
@@ -55,14 +55,26 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
-          <Route path='/sign-in' component={SignInAndSignUp} />
+          <Route
+            exact
+            path='/sign-in'
+            render={() =>
+              this.props.currentUser ? (
+                <Redirect to='/' />
+              ) : (
+                  <SignInAndSignUp />
+                )
+            } />
 
         </Switch>
       </div>
     );
   }
 }
+const mapStateToProps = ({ user }) => ({
+  currentUser : user.currentUser
+})
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
