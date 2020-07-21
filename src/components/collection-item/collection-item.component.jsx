@@ -16,12 +16,18 @@ const CollectionItem = ({item, addItem})=>{
             <span className='name'> {name} </span>
             <span className='price'> {price} </span>
         </div> 
+        {/*read line 27 first, then come back and read this,
+        now we are going to call that function, which dispatches the addItem action,
+        and we are going to pass though the item that we deconstructed off of the props */}
         <CustomButton onClick ={()=>addItem(item)}>Add Item</CustomButton>
     </div>
     )
     
 }
+
 const mapDispatchToProps = dispatch =>({
+    //when we call the addItem function in CollectionItem component, we are going
+    //to dispatch the addItem action, with whatever paremeter we pass in, now read line 19
     addItem: item => dispatch(addItem(item))
 })
 export default connect(null, mapDispatchToProps)(CollectionItem);
