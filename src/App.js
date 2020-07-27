@@ -41,7 +41,7 @@ class App extends React.Component {
           }, () => console.log(this.state))
         })
       }
-      //if the user isnt logged in, just this.state.currentUser to null, (userAuth=null
+      //if the user isnt logged in, just set this.state.currentUser to null, (userAuth=null
       //if the user is not signed in when auth.onAuthStateChanged is called)
       setCurrentUser(userAuth);
 
