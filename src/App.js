@@ -12,12 +12,12 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import { setCurrentUser } from './redux/user/user.actions'
 import {selectCurrentUser} from './redux/user/user.selectors.js'
 import { createStructuredSelector } from 'reselect';
-
 class App extends React.Component {
 
   unsubscribeFromAuth = null;
   componentDidMount() {
     const { setCurrentUser } = this.props;
+
 
     //this.unsSubscribeFromAuth = firebase.auth().onAuthStateChanged() , this function
     // fires off whenever someone logs in or out and it takes in an async 
@@ -79,7 +79,7 @@ class App extends React.Component {
   }
 }
 const mapStateToProps = (state) => createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 })
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
